@@ -1,0 +1,167 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 233, 219);
+    --cardBG: rgb(225, 225, 225);
+    --transition: all 0.3s ease;
+}
+
+.offer {
+    padding-top: 5rem;
+}
+
+.secIntro {
+    margin-bottom: 2rem;
+}
+
+.secIntro .secTitle {
+    color: var(--blackColor);
+    line-height: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.secIntro p {
+    font-size: 13px;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.singleOffer {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: var(--whiteColor);
+    transition: var(--transition);
+}
+
+.singleOffer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.destImage {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.destImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.discount {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px 10px;
+    background: var(--PrimaryColor);
+    color: var(--whiteColor);
+    border-radius: 3rem;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.offerBody {
+    padding: 1rem;
+}
+
+.price {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.price h4 {
+    color: var(--blackColor);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.price .status {
+    padding: 5px 10px;
+    color: var(--PrimaryColor);
+    background: var(--inputColor);
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 3rem;
+}
+
+.amenities {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.singleAmenity {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--inputColor);
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.singleAmenity .icon {
+    color: var(--textColor);
+}
+
+.singleAmenity small {
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.location {
+    padding-bottom: 1rem;
+}
+
+.location .icon {
+    margin-right: 10px;
+    color: var(--textColor);
+}
+
+.location small {
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.btn {
+    width: 100%;
+    justify-content: space-between;
+    color: var(--whiteColor);
+    font-weight: 600;
+    gap: .5rem;
+    background: var(--PrimaryColor);
+}
+
+.btn:hover {
+    background: var(--HoverColor);
+}
+
+.btn .icon {
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+    .mainContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mainContent {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}

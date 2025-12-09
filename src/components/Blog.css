@@ -1,0 +1,104 @@
+:root {
+    --primary-color: #2ab5d3;
+    --secondary-color: #1a1a1a;
+    --blackColor: #000;
+    --whiteColor: #fff;
+    --textColor: #5e626F;
+    --greyText: rgb(190, 190, 190);
+}
+
+.blog {
+    padding-bottom: 5rem;
+}
+
+.blog .secIntro .secTitle {
+    color: var(--blackColor);
+    line-height: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.blog .secIntro p {
+    font-size: 13px;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.blog .mainContent {
+    gap: 1rem;
+}
+
+.singlePost {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+    transition: .3s ease;
+    height: 100%;
+}
+
+.singlePost:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px 2px rgba(178, 178, 178, 0.6);
+}
+
+.imgDiv {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imgDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+.imgDiv:hover img {
+    transform: scale(1.1);
+}
+
+.postDetails {
+    padding: 1rem 0;
+}
+
+.postDetails h3 {
+    color: var(--blackColor);
+    font-weight: 700;
+}
+
+.postDetails p {
+    color: var(--textColor);
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: .5rem;
+}
+
+.blog a {
+    justify-content: space-between;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+}
+
+.blog a:hover {
+    color: var(--secondary-color);
+}
+
+.blog a .icon {
+    font-size: 20px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 650px) {
+    .blog .mainContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .blog .mainContent {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

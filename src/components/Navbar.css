@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #2ab5d3;
+    --secondary-color: #1a1a1a;
+    --gradientColor: linear-gradient(to right, #4481eb, #04befe);
+    --whiteColor: #fff;
+    --blackColor: #000;
+    --textColor: #5e626F;
+    --whiteColorDeam: #ededed;
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 225);
+}
+
+.navBarSection {
+    background: transparent;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    transition: .3s ease-in-out;
+}
+
+.activeHeader {
+    background: var(--whiteColor);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+.navLists {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navLink {
+    color: var(--textColor);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.navLink:hover {
+    color: var(--primary-color);
+}
+
+.headerBtns {
+    display: flex;
+    gap: 1rem;
+}
+
+.loginBtn {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.loginBtn:hover {
+    background: var(--secondary-color);
+    color: var(--whiteColor);
+}
+
+/* Icons */
+.closeNavbar,
+.toggleNavbar {
+    display: none;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .navBar {
+        position: absolute;
+        background: var(--whiteColor);
+        height: max-content;
+        width: 80%;
+        border-radius: 1rem;
+        top: -500rem;
+        /* Hidden by default */
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 2000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        transition: .4s ease-in-out;
+    }
+
+    .navBar.activeNavbar {
+        top: 7rem;
+    }
+
+    .navLists {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        padding: 2rem 0;
+    }
+
+    .navItem {
+        padding: 1rem 0;
+    }
+
+    .closeNavbar {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--primary-color);
+    }
+
+    .closeNavbar:hover {
+        color: var(--secondary-color);
+    }
+
+    .toggleNavbar {
+        display: block;
+        color: var(--secondary-color);
+    }
+
+    .icon {
+        font-size: 25px;
+        cursor: pointer;
+    }
+}

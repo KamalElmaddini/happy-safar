@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #2ab5d3;
+    --secondary-color: #1a1a1a;
+    --gradientColor: linear-gradient(to right, #4481eb, #04befe);
+    --whiteColor: #fff;
+    --blackColor: #000;
+    --textColor: #5e626F;
+    --whiteColorDeam: #ededed;
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+}
+
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Darker neutral overlay */
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+video,
+.home img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.homeContent {
+    width: 100%;
+    height: max-content;
+    padding: 8rem 1.5rem 3rem;
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--whiteColor);
+    z-index: 100;
+}
+
+.textDiv {
+    padding: 2rem 0;
+}
+
+.smallText {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.homeTitle {
+    position: relative;
+    font-size: 1.8rem;
+}
+
+.cardDiv {
+    position: relative;
+    padding: 2rem 1rem;
+    background: var(--whiteColor);
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.destinationInput,
+.dateInput,
+.priceInput {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    color: var(--textColor);
+    padding-bottom: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input {
+    height: 40px;
+    padding: 0 1rem;
+    background: var(--inputColor);
+    border-radius: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input input::placeholder {
+    font-size: 13px;
+}
+
+.icon {
+    font-size: 18px;
+    color: var(--primary-color) !important;
+    cursor: pointer;
+}
+
+.searchOptions {
+    position: absolute;
+    background: var(--gradientColor);
+    width: max-content;
+    bottom: -0.7rem;
+    column-gap: .8rem;
+    padding: 5px 1rem;
+    border-radius: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchOptions span {
+    font-size: 13px;
+}
+
+.searchOptions .icon {
+    color: var(--whiteColor) !important;
+    font-size: 18px;
+}
+
+.homeFooterIcons {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.homeFooterIcons .icon {
+    font-size: 20px;
+    margin: 0 5px;
+    color: var(--whiteColor) !important;
+    font-weight: 600;
+}
+
+/* Media Queries */
+@media screen and (min-width: 500px) {
+    .homeTitle {
+        font-size: 2.5rem;
+        width: max-content;
+    }
+
+    .smallText {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .cardDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .home {
+        height: 85vh;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .cardDiv {
+        grid-template-columns: repeat(3, 1fr);
+        bottom: -5rem;
+    }
+}

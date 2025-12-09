@@ -1,0 +1,74 @@
+:root {
+    --primary-color: #2ab5d3;
+    --secondary-color: #1a1a1a;
+    --blackColor: #000;
+    --whiteColor: #fff;
+    --textColor: #5e626F;
+    --cardBG: rgb(225, 225, 225);
+}
+
+.about {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.about .secContainer .titleDiv {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about .secContainer .titleDiv small {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--blackColor);
+}
+
+.about .secContainer .titleDiv h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blackColor);
+}
+
+.about .mainContent {
+    gap: 2rem;
+}
+
+.singleItem {
+    text-align: center;
+}
+
+.singleItem img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.singleItem h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blackColor);
+    padding-bottom: .5rem;
+}
+
+.singleItem p {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--textColor);
+}
+
+/* Media Queries */
+@media screen and (min-width: 650px) {
+    .about .mainContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .about .mainContent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
