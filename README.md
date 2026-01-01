@@ -2,6 +2,8 @@
 
 Welcome to **Happy Safar**, a modern and immersive travel agency website designed to inspire your next adventure. Built with **React** and **Vite**, this project features a warm, engaging user interface with smooth animations and a responsive design.
 
+[**View Live Demo**](https://jovial-melomakarona-2100da.netlify.app/)
+
 ## 📸 Overview
 
 Happy Safar serves as a digital gateway for travelers, showcasing popular destinations, special offers, and travel tips. The design emphasizes visual storytelling with a focus on warm tones (autumn themes) and user-friendly navigation.
